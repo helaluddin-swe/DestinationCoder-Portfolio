@@ -23,10 +23,10 @@ const MainPart = ({ scrollToSection }) => {
           
           
             
-            <motion.div className="flex space-x-6 mb-8">
+            <motion.div className="flex space-x-6 mb-8 cursor-pointer">
                 {SocialLinks.map((social, i) => (
-                    <motion.a whileHover={{ scale: 1.1, y: -3 }} className={`px-3 rounded-full ${isDarkMode ? "text-gray-400" : "text-gray-600"}`} key={i} href={social.href} >
-                        <social.icon size={20} />
+                    <motion.a whileHover={{ scale: 1.1, y: -3 }} className={`px-3 rounded-full hover:border-l-purple-500 ${isDarkMode ? "text-gray-400 " : "text-gray-600"}`} key={i} href={social.href} >
+                        <social.icon size={20} className="hover:border-blue-500"/>
                     </motion.a>
                 ))}
 

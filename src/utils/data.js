@@ -7,13 +7,28 @@ import IMG_5 from "../images/project-5.png"
 import IMG_6 from "../images/project-6.png"
 import IMG_7 from "../images/project-7.png"
 import Profile_1 from "../images/helal9.jpg"
+import Y1 from "../images/youtube-project-2.png"
+import Y2 from "../images/youtube-project-3.png"
+import Y3 from "../images/youtube-project-4.png"
+import Y4 from "../images/youtube-project-6.png"
+import Y5 from "../images/youtube-project-7.png"
+import School1 from "../images/DestinationSchool-1.png"
+import  Commerce2 from "../images/DestinationCommerce-2.png"
+import  Coder1 from "../images/DestinationCoder-1.png"
+import  RealEstate1 from "../images/DestinationRealEstate-2.png"
+import  Todo1 from "../images/DestinationTodo-1.png"
+import  Hotel1 from "../images/DestinationHotelBooking-4.png"
+import  JobTraker1 from "../images/DestinationJobTraker-1.png"
+import  Resume1 from "../images/DestinationResumeBuilder1.png"
+
+
 
 import { BookOpen, Code, Code2, Coffee, Database, Heart, Mail, Server } from "lucide-react"
 
 // passions, journey steps, and projects data combined
 // created by Helal Uddin
 export const Profile={"url":Profile_1}
-export const SocialLinks=[{ icon: FiGithub, href: "#" }, { icon: FiLinkedin, href: "#" }, { icon: Mail, href: "#" }]
+export const SocialLinks=[{ icon: FiGithub, href: "https://github.com/helaluddin-swe" }, { icon: FiLinkedin, href: "https://www.linkedin.com/in/helaluddin-swe/" }, { icon: Mail, href: "ahmedhelaluddin0330@gmail.com" }]
 export const STATS=
 [
   { "statistic": "Projects Completed", "value": "50+" },
@@ -181,52 +196,146 @@ export const JOURNEY_STEPS = [
 export const PROJECTS = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Destination Coder Portfolio Website Project(React)",
     description:
-      "A full-stack e-commerce solution with advanced filtering, payment integration, and real-time inventory tracking.",
-    image:IMG_1,
-    tags: ["React", "Tailwind", "Framer Motion"],
+      "A coding-focused platform designed to showcase modern UI components and developer projects with smooth interactions.",
+    image: Coder1,
+    tags: ["React", "Tailwind", "Vite"],
     liveUrl: "#",
-    githubUrl: "#",
-    featured: false,
-    category: "Full Stack",
+    githubUrl: "https://github.com/helaluddin-swe/destinationcoder",
+    featured: true,
+    category: "Frontend",
   },
   {
     id: 2,
-    title: "Blog App with AI Post Generator",
+    title: "Destination School Management (Full Stack)",
     description:
-      "A full-stack blog app using the MERN stack with Markdown support, AI-generated content, and tag filtering.",
-    image: IMG_2,
-    tags: ["React", "Node.js", "MongoDB", "Tailwind"],
-    liveUrl: "https://youtu.be/tUnGudIBBjQ",
-    githubUrl: "#",
+      "A complete school management system with student, teacher, and class modules built using Next.js, Node.js, and PostgreSQL.",
+    image: School1,
+    tags: ["Next.js", "Express", "PostgreSQL"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/helaluddin-swe/Destination-School-Management-Full-Stack",
     featured: true,
     category: "Full Stack",
   },
   {
     id: 3,
-    title: "Portfolio Website",
+    title: "Destination Real Estate",
     description:
-      "A responsive developer portfolio built with Next.js and Framer Motion for smooth animations and fast loading.",
-    image: IMG_3,
-    tags: ["Next.js", "Tailwind", "Framer Motion"],
+      "A property listing platform featuring advanced search, maps, and filtering functionalities for real estate management.",
+    image: RealEstate1,
+    tags: ["React", "Node.js", "MongoDB"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/helaluddin-swe/Destination-Real-Estate",
+    featured: false,
+    category: "Full Stack",
+  },
+  {
+    id: 4,
+    title: "Destination Job Tracker (Full Stack)",
+    description:
+      "A job application management tool that helps users track applications, statuses, and progress easily.",
+    image: JobTraker1,
+    tags: ["React", "Express", "MongoDB"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/helaluddin-swe/Destination-Job-Traker-Full-Stack",
+    featured: false,
+    category: "Full Stack",
+  },
+  {
+    id: 5,
+    title: "Destination Todo App (Full Stack)",
+    description:
+      "A modern productivity app for managing tasks with authentication and persistent cloud storage.",
+    image: Todo1,
+    tags: ["React", "Node.js", "MongoDB"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/helaluddin-swe/DestinationTodo-App-Full-Stack",
+    featured: false,
+    category: "Full Stack",
+  },
+  {
+    id: 6,
+    title: "Destination Airbnb Clone (Full Stack)",
+    description:
+      "A full-stack clone of Airbnb with room listings, user authentication, and booking management.",
+    image: IMG_6,
+    tags: ["Next.js", "Prisma", "PostgreSQL"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/helaluddin-swe/DestinationAirbnb-clone-full-stack",
+    featured: true,
+    category: "Full Stack",
+  },
+  {
+    id: 7,
+    title: "Destination Resume Builder (Full Stack)",
+    description:
+      "An AI-assisted resume builder where users can generate and customize resumes using modern templates.",
+    image: Resume1,
+    tags: ["Next.js", "OpenAI", "Tailwind"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/helaluddin-swe/DestinationResumeBuilder-full-stack",
+    featured: true,
+    category: "AI Project",
+  },
+  {
+    id: 8,
+    title: "Destination Ebook Creator with AI",
+    description:
+      "An AI-powered ebook generation app allowing users to create and export ebooks with custom prompts.",
+    image: IMG_7,
+    tags: ["Next.js", "OpenAI", "Node.js"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/helaluddin-swe/DestinationEbook-Creator-with-AI",
+    featured: true,
+    category: "AI Project",
+  },
+  {
+    id: 9,
+    title: "Destination Hotel Booking System",
+    description:
+      "A hotel booking and management system with room availability, pricing, and customer dashboard.",
+    image: Hotel1,
+    tags: ["React", "Express", "MongoDB"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/helaluddin-swe/DestinationHotel-Booking-System",
+    featured: false,
+    category: "Full Stack",
+  },
+  {
+    id: 10,
+    title: "Destination YouTube Clone",
+    description:
+      "A YouTube clone featuring video upload, playback, subscriptions, and search functionality.",
+    image: Y3,
+    tags: ["React", "Firebase", "Tailwind"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/helaluddin-swe/Destination-Youtube-clone",
     featured: true,
     category: "Frontend",
   },
   {
-    id: 4,
-    title: "Hotel Booking System",
+    id: 11,
+    title: "Destination Coder Portfolio",
     description:
-      "A dynamic hotel management system allowing users to search, book, and review hotels with secure authentication.",
-    image: IMG_4,
-    tags: ["Node.js", "Express", "MongoDB", "EJS"],
+      "A personal portfolio website showcasing all projects, experiences, and skills in a modern responsive layout.",
+    image: Coder1,
+    tags: ["Next.js", "Framer Motion", "Tailwind"],
     liveUrl: "#",
-    githubUrl: "#",
-    featured: false,
+    githubUrl: "https://github.com/helaluddin-swe/DestinationCoder-Portfolio",
+    featured: true,
+    category: "Frontend",
+  },
+  {
+    id: 12,
+    title: "Destination Commerce",
+    description:
+      "A full-stack e-commerce platform with product management, payments, and real-time order tracking.",
+    image: Commerce2,
+    tags: ["React", "Express", "MongoDB"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/helaluddin-swe/DestinationCommerce",
+    featured: true,
     category: "Full Stack",
   },
 ];
-
-

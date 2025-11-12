@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "../../contexts/ThemeContext";
-import { MapPin, Send, Facebook, Github, Linkedin, Twitter } from "lucide-react";
+import { MapPin, Send, Facebook, Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const AboutSection = () => {
   const { isDarkMode } = useTheme();
@@ -192,17 +192,17 @@ const AboutSection = () => {
         >
           <p className="text-lg mb-2 font-semibold text-blue-500">Connect with me</p>
           <div className="flex gap-6 text-2xl">
-            <a href="https://github.com/" target="_blank" className="hover:text-blue-600">
+            <a href="https://github.com/helaluddin-swe" target="_blank" className="hover:text-blue-600">
               <Github />
             </a>
-            <a href="https://linkedin.com/" target="_blank" className="hover:text-blue-600">
+            <a href="https://www.linkedin.com/in/helaluddin-swe/" target="_blank" className="hover:text-blue-600">
               <Linkedin />
             </a>
-            <a href="https://twitter.com/" target="_blank" className="hover:text-blue-600">
+            <a href="https://x.com/helal_uddin_swe" target="_blank" className="hover:text-blue-600">
               <Twitter />
             </a>
-            <a href="https://facebook.com/" target="_blank" className="hover:text-blue-600">
-              <Facebook />
+            <a href="https://www.instagram.com/helal_uddin_swe/" target="_blank" className="hover:text-blue-600">
+              <Instagram />
             </a>
           </div>
         </motion.div>
