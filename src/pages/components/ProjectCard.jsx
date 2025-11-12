@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useTheme } from "../../contexts/ThemeContext";
 import { FiGithub } from "react-icons/fi";
 import { ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({ key, index, item }) => {
   const { isDarkMode } = useTheme();
@@ -42,11 +43,11 @@ const ProjectCard = ({ key, index, item }) => {
           whileHover={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}
           className="absolute inset-0 flex justify-center items-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <button className="bg-blue-600 flex items-center gap-2 text-white font-semibold border rounded-2xl px-4 py-2 shadow-md hover:bg-blue-700 transition">
+        > 
+         <Link to={item.githubUrl}> <button className="bg-blue-600 flex items-center gap-2 text-white font-semibold border rounded-2xl px-4 py-2 cursor-pointer shadow-md hover:bg-blue-700 transition">
             <FiGithub /> Github
-          </button>
-          <button className="bg-yellow-400 flex items-center gap-2 text-blue-900 font-semibold rounded-2xl px-4 py-2 shadow-md hover:bg-yellow-500 transition">
+          </button></Link>
+          <button className="bg-yellow-400 flex items-center gap-2 cursor-pointer text-blue-900 font-semibold rounded-2xl px-4 py-2 shadow-md hover:bg-yellow-500 transition">
             <ExternalLink /> Live Link
           </button>
         </motion.div>
