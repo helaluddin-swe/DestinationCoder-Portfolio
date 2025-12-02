@@ -4,6 +4,7 @@ import { Sun, Moon, Menu, X, Code2 } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "../../contexts/ThemeContext";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { isDarkMode, toggleDarkMode } = useTheme();
@@ -30,9 +31,10 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <Code2 size={24} className="text-blue-500" />
-          <span className="text-3xl  font-bold md:text-4xl px-2 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent ">
-            DestinationCoder
+          <span className="text-3xl  font-bold md:text-4xl px-2 bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent ">
+           Helal Uddin
           </span>
+          <span className="bg-blue-400 rounded-2xl px-3 py-2"> <Link to={"download-resume"}>See Resume </Link> </span>
         </div>
 
         <div className="hidden md:flex items-center space-x-2">
