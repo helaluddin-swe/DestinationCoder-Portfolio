@@ -9,6 +9,21 @@ const AboutSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSent, setIsSent] = useState(false);
 
+const handleMessage = (e) => {
+  e.preventDefault();
+
+  const phone = "8801851121341";
+
+  const msg = encodeURIComponent(
+    `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`
+  );
+
+  const url = `https://wa.me/${phone}?text=${msg}`;
+
+  window.open(url, "_blank").focus();
+};
+
+
   const journeyData = [
     { year: "2021", title: "Started Learning Web Development", location: "Dhaka, Bangladesh" },
     { year: "2022", title: "Began Building MERN Projects", location: "Remote" },
@@ -27,9 +42,8 @@ const AboutSection = () => {
   return (
     <div
       id="about"
-      className={`pb-24 text-center px-6 md:px-20 transition-colors duration-300 ${
-        isDarkMode ? "bg-gray-900 text-gray-200" : "bg-gray-50 text-gray-800"
-      }`}
+      className={`pb-24 text-center px-6 md:px-20 transition-colors duration-300 ${isDarkMode ? "bg-gray-900 text-gray-200" : "bg-gray-50 text-gray-800"
+        }`}
     >
       {/* Title */}
       <motion.h2
@@ -48,11 +62,10 @@ const AboutSection = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className={`rounded-xl p-6 text-left shadow-md border transition-colors duration-300 ${
-            isDarkMode
+          className={`rounded-xl p-6 text-left shadow-md border transition-colors duration-300 ${isDarkMode
               ? "bg-gray-800 border-gray-700"
               : "bg-white border-gray-200"
-          }`}
+            }`}
         >
           <h3 className="text-2xl font-semibold mb-4 text-blue-500">About Me</h3>
           <p className="leading-relaxed">
@@ -67,11 +80,10 @@ const AboutSection = () => {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className={`rounded-xl p-6 text-left shadow-md border transition-colors duration-300 ${
-            isDarkMode
+          className={`rounded-xl p-6 text-left shadow-md border transition-colors duration-300 ${isDarkMode
               ? "bg-gray-800 border-gray-700"
               : "bg-white border-gray-200"
-          }`}
+            }`}
         >
           <h3 className="text-2xl font-semibold mb-4 text-blue-500">Journey of Development</h3>
           <ul className="space-y-4">
@@ -81,9 +93,8 @@ const AboutSection = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: i * 0.1 }}
-                className={`pl-4 border-l-4 border-blue-600 ${
-                  isDarkMode ? "text-gray-300" : "text-gray-700"
-                }`}
+                className={`pl-4 border-l-4 border-blue-600 ${isDarkMode ? "text-gray-300" : "text-gray-700"
+                  }`}
               >
                 <p className="text-sm text-gray-400">{item.year}</p>
                 <p className="font-semibold">{item.title}</p>
@@ -103,7 +114,10 @@ const AboutSection = () => {
         transition={{ duration: 0.5 }}
         className="text-3xl font-semibold mb-8 text-blue-600"
       >
-        Contact Me for Hire
+       
+          Contact Me for Hire
+        
+
       </motion.h3>
 
       <div id="contact" className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
@@ -113,11 +127,10 @@ const AboutSection = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className={`p-6 rounded-xl shadow-md border transition-colors duration-300 ${
-            isDarkMode
+          className={`p-6 rounded-xl shadow-md border transition-colors duration-300 ${isDarkMode
               ? "bg-gray-800 border-gray-700"
               : "bg-white border-gray-200"
-          }`}
+            }`}
         >
           <div className="mb-4">
             <input
@@ -126,11 +139,10 @@ const AboutSection = () => {
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               required
-              className={`w-full px-4 py-2 rounded-md border bg-transparent outline-none transition-colors duration-300 ${
-                isDarkMode
+              className={`w-full px-4 py-2 rounded-md border bg-transparent outline-none transition-colors duration-300 ${isDarkMode
                   ? "border-gray-600 text-gray-200"
                   : "border-gray-300 text-gray-800"
-              }`}
+                }`}
             />
           </div>
           <div className="mb-4">
@@ -140,11 +152,10 @@ const AboutSection = () => {
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               required
-              className={`w-full px-4 py-2 rounded-md border bg-transparent outline-none transition-colors duration-300 ${
-                isDarkMode
+              className={`w-full px-4 py-2 rounded-md border bg-transparent outline-none transition-colors duration-300 ${isDarkMode
                   ? "border-gray-600 text-gray-200"
                   : "border-gray-300 text-gray-800"
-              }`}
+                }`}
             />
           </div>
           <div className="mb-4">
@@ -153,19 +164,20 @@ const AboutSection = () => {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               required
-              className={`w-full px-4 py-2 h-28 rounded-md border bg-transparent outline-none transition-colors duration-300 ${
-                isDarkMode
+              className={`w-full px-4 py-2 h-28 rounded-md border bg-transparent outline-none transition-colors duration-300 ${isDarkMode
                   ? "border-gray-600 text-gray-200"
                   : "border-gray-300 text-gray-800"
-              }`}
+                }`}
             ></textarea>
           </div>
 
           <button
             type="submit"
             className="bg-blue-600 text-white px-6 py-2 rounded-lg flex items-center gap-2 mx-auto hover:bg-blue-700 transition"
-          >
-            <Send size={18} /> Send Message
+        onClick={handleMessage }  >
+            <Send size={18} />  
+        
+         Send Message on WhatsApp
           </button>
 
           {isSent && (
@@ -184,11 +196,10 @@ const AboutSection = () => {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className={`p-6 rounded-xl shadow-md border flex flex-col justify-center items-center gap-6 transition-colors duration-300 ${
-            isDarkMode
+          className={`p-6 rounded-xl shadow-md border flex flex-col justify-center items-center gap-6 transition-colors duration-300 ${isDarkMode
               ? "bg-gray-800 border-gray-700"
               : "bg-white border-gray-200"
-          }`}
+            }`}
         >
           <p className="text-lg mb-2 font-semibold text-blue-500">Connect with me</p>
           <div className="flex gap-6 text-2xl">
