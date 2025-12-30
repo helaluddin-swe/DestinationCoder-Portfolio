@@ -47,9 +47,9 @@ const ProjectCard = ({ key, index, item }) => {
          <Link to={item.githubUrl}> <button className="bg-blue-600 flex items-center gap-2 text-white font-semibold border rounded-2xl px-4 py-2 cursor-pointer shadow-md hover:bg-blue-700 transition">
             <FiGithub /> Github
           </button></Link>
-          <button className="bg-yellow-400 flex items-center gap-2 cursor-pointer text-blue-900 font-semibold rounded-2xl px-4 py-2 shadow-md hover:bg-yellow-500 transition">
+         <Link to={item.liveUrl}> <button className="bg-yellow-400 flex items-center gap-2 cursor-pointer text-blue-900 font-semibold rounded-2xl px-4 py-2 shadow-md hover:bg-yellow-500 transition">
             <ExternalLink /> Live Link
-          </button>
+          </button></Link>
         </motion.div>
       </div>
 
