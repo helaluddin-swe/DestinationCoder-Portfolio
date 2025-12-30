@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "../../contexts/ThemeContext";
 import { MapPin, Send, Facebook, Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import p1 from "../../assets/p1.png"
 
 const AboutSection = () => {
   const { isDarkMode } = useTheme();
@@ -12,13 +13,13 @@ const AboutSection = () => {
 const handleMessage = (e) => {
   e.preventDefault();
 
-  const phone = "8801851121341";
+  // const phone = "8801851121341";
 
   const msg = encodeURIComponent(
     `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`
   );
 
-  const url = `https://wa.me/${phone}?text=${msg}`;
+  const url = `https://wa.link/zdsjn2?text=${msg}`;
 
   window.open(url, "_blank").focus();
 };
@@ -231,6 +232,8 @@ const handleMessage = (e) => {
         >
           Back to Top ↑
         </button>
+        <div className="flex flex-col gap-4  items-center text-center"><h2 className="text-2xl font-bold">Direct Chat with WhatsApp</h2>
+        <img src={p1} alt="whatsapp" /></div>
       </div>
     </div>
   );
