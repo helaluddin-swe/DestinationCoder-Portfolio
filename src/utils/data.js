@@ -20,6 +20,9 @@ import  Todo1 from "../images/DestinationTodo-1.png"
 import  Hotel1 from "../images/DestinationHotelBooking-4.png"
 import  JobTraker1 from "../images/DestinationJobTraker-1.png"
 import  Resume1 from "../images/DestinationResumeBuilder1.png"
+import GreenCart from "../images/greencart.png"
+import NoticeBoard from "../images/noticeboard.png"
+import Thumbnail from "../images/thumbnail.png"
 
 
 
@@ -335,4 +338,33 @@ export const PROJECTS = [
     featured: true,
     category: "Full Stack",
   },
+  {id:13,
+    title:"Thumbnail Maker with AI",
+    description:"A full stack Ai gemini thumbnail generator application where user can generate thumbanil for youtube ,facebook or any social media or professional use case in video make thumbanil within few second.Amazing web application for any content cretor .",
+    image:Thumbnail,
+    tags:["React","Tailwind","Nodejs","MongoDB","Gemini","Framer Motion"],
+    liveUrl:"https://helaluddin-swe-thumbai.vercel.app/",
+    githubUrl:"https://github.com/helaluddin-swe/thumbai",
+    featured:true,
+    category:"Full Stack"
+  },{id:14,
+    title:"Online Grocery Application",
+    description:"A full stack Ai gemini thumbnail generator application where user can generate thumbanil for youtube ,facebook or any social media or professional use case in video make thumbanil within few second.Amazing web application for any content cretor .",
+    image:Thumbnail,
+    tags:["React","Tailwind","Nodejs","MongoDB","Typescript"],
+    liveUrl:"https://helaluddin-swe-thumbai.vercel.app/",
+    githubUrl:"https://github.com/helaluddin-swe/thumbai",
+    featured:true,
+    category:"Full Stack"
+  },{id:15,
+    title:"Thumbnail Maker with AI",
+    description:"A full stack Ai gemini thumbnail generator application where user can generate thumbanil for youtube ,facebook or any social media or professional use case in video make thumbanil within few second.Amazing web application for any content cretor .",
+    image:Thumbnail,
+    tags:["React","Tailwind","Nodejs","MongoDB","Gemini","Framer Motion"],
+    liveUrl:"https://helaluddin-swe-thumbai.vercel.app/",
+    githubUrl:"https://github.com/helaluddin-swe/thumbai",
+    featured:true,
+    category:"Full Stack"
+  }
+
 ];
